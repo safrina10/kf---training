@@ -1,0 +1,24 @@
+Name=input("Enter The Name: ")
+RollNumber=int(input("Enter The Roll Number:"))
+sub1,sub2,sub3,sub4,sub5=map(int,input().split())
+Avg=sub1+sub2+sub3+sub4+sub5
+Average=Avg/5
+TotalPassSub=0
+
+marks=[sub1,sub2,sub3,sub4,sub5]
+for i in marks:
+    if i>35:
+        TotalPassSub+=1
+if TotalPassSub==5:
+    print("Pass")
+elif (TotalPassSub>=3):
+    print("Needs Improvement")
+else:
+    print("Fail")
+
+print(f"Student Name {Name}")
+print(f"RollNr {RollNumber }")
+print(Average)
+
+
+    
