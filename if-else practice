@@ -1,0 +1,71 @@
+"""
+a=int(input())
+if a>0:
+    print("positive")
+else:
+    print("negative")
+"""
+"""
+a=int(input())
+if a%2==0:
+    print("even")
+else:
+    print("odd")
+"""
+"""
+a=int(input())
+b=input("Enter The Citizen:")
+if a>=18 and b=="indain":
+    print("yes you can vote")
+else:
+    print("you are not eligible")
+"""
+"""
+a=int(input())
+b=int(input())
+if a>b:
+    print("a greater")
+else:
+    print("b")
+"""
+"""
+a=input("enter the colour:")
+if a=="red":
+    print("stop")
+elif a=="green":
+    print("get ready")
+else:
+    print("go")
+"""
+"""
+a,b,c=map(int,input().split())
+if a>b:
+    print("a is big")
+elif b>c:
+    print("b")
+else:
+    print("c")
+"""
+"""
+a=input()
+b=int(input())
+if a =="login"and b==123:
+    print("yeah login")
+else:
+    print("no wrong credentials")
+"""
+"""
+a=input()
+b="AEIOUaeiou"
+for i in a:
+    if i in b:
+        print(i,"vowels")
+    elif i not in b:
+        print("consonat")
+    else:
+        print("worng")
+"""
+for i in range(4):
+    for j in range(i):
+        print(*,end="")
+    print()

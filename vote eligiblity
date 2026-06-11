@@ -1,0 +1,6 @@
+a=int(input())
+b=input("Enter The Citizen:")
+if a>=18 and b=="indain":
+    print("yes you can vote")
+else:
+    print("you are not eligible")
