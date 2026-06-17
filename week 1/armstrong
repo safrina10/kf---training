@@ -1,0 +1,10 @@
+a=int(input("enter the number:"))
+c=str(a)
+d=len(c)
+total=0
+for i in c:
+    total+=int(i)**d
+if a==total:
+    print("armstrong")
+else:
+    print("no")

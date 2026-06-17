@@ -1,0 +1,156 @@
+
+'''Ask how many students, take name and marks for Math, Science, English for each student, then calculate total, average and grade (A for 90+, B for 80+, C for 70+, D for 60+, F below 60), and mark result as Fail if any subject is below 35 otherwise Pass.
+ 
+Print the following items too,
+ 
+Option 1 : Get Student name and print his person info :
+Name
+Total
+Average
+Grade
+Result
+Option 2 :  Overall info:
+Top Scorer
+Class Average
+Number of Passes
+Number of Fails
+Highest Subject Mark
+Lowest Subject Mark'''
+
+a=int(input("enter how many Students:"))
+
+Students=[]
+
+all_math=[]
+all_science=[]
+all_english=[]
+all_avg=[]
+all_total=[]
+
+for i in range(1,a+1):
+    b=input("enter your name:")
+    math=int(input("enter your math marks: "))
+    science=int(input("enter the sci mark:"))
+    english=int(input("enter the  eng mark:"))
+    total= math+science+english
+    avg=total/3
+
+    if(avg>=90 and math>=35 and science>=35 and english>=35):
+        grade="A"
+        result="pass"
+    elif(avg>=80 and math>=35 and science>=35 and english>=35):
+        grade="B"
+        result="pass"
+    elif(avg>=70 and math>=35 and science>=35 and english>=35):
+        grade="C"
+        result="pass"
+    elif(avg>=60 and math>=35 and science>=35 and english>=35):
+        grade="D"
+        result="pass"
+    elif(avg<60 and avg>=35 and math>=35 and science>=35 and english>=35):
+        grade="F"
+        result="pass"
+    elif(avg<35 or math<35 or science<35 or english<35):
+        grade="fail"
+        result="fail"
+
+
+    Students.append([b,math,science,english,total,avg,result,grade,all_total])
+    all_english.append(english)
+    all_math.append(math)
+    all_science.append(science)
+    all_total.append(total)
+
+    all_avg.append(avg)
+    
+
+option=int(input("enter yor opion:1.persnoal details ,2. overall info:  " ))
+
+match option :
+    case 1:
+        name=input("enter the name:")
+        for s in Students:
+            if s[0] == name:
+                print("name",s[0])
+                print("mark1",s[1])
+                print("mark2",s[2])
+                print("mark3",s[3])
+                print("total",s[4])
+                print("avg",s[5])
+                print("result",s[6])
+                print("grade",s[7])
+                print("over_total",s[8])
+
+    case 2:
+
+        total_avg=sum(all_avg)/len(all_avg)
+        print("class avergae:",total_avg)
+    
+        print(f"high in maths :{max(all_math)},science :{max(all_science)},eng:{max(all_english)}")
+        print(f"low in math:{min(all_math)},low in science: {min(all_science)},low in english{min(all_english)}")
+        print(f"{(s[0])} highest and their score {max(all_total)}")
+         
+        pass_count = 0
+        fail_count = 0
+
+        for s in Students:
+            if s[5]=="pass":
+                pass_count+=1
+            else:
+                fail_count+=1
+
+        print("no of pass:",pass_count)
+        print("no of fail:",fail_count)        
+        
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
